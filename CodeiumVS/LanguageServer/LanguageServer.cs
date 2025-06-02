@@ -1,4 +1,4 @@
-﻿using CodeiumVS.Packets;
+using CodeiumVS.Packets;
 using Community.VisualStudio.Toolkit;
 using EnvDTE;
 using Microsoft.VisualStudio;
@@ -72,11 +72,7 @@ public class LanguageServer
         await PrepareAsync();
 
         _metadata.request_id = 0;
-        string ideName = "visual_studio";
-        if (_languageServerVersion == "1.16.0")
-        {
-            ideName = "vscode";
-        }
+        string ideName = "vscode";
         _metadata.ide_name = ideName;
         _metadata.ide_version = ideVersion;
         _metadata.extension_name = Vsix.Name;
@@ -894,7 +890,7 @@ public class LanguageServer
                         await AddFilesToIndexLists(item.SubProject);
                     }
                 }
-                catch (Exception ex)
+                catch (Exception ex) 
                 {
                     await _package.LogAsync($"Failed to process sub-project: {ex.Message}");
                     continue;

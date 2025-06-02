@@ -69,5 +69,5 @@ jobs:
       with:
         path: CodeiumVS/bin/Release/Codeium.vsix
         process_gcloudignore: false
-        destination: exafunction-dist/codeium_visual_studio/${{ github.ref_name }}
+        destination: exafunction-dist/codeium_vscode/${{ github.ref_name }}
         gzip: false
