@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace CodeiumVS.Utilities;
@@ -22,7 +22,8 @@ public class ProcessExtensions
     {
         AssociateCompletionPortInformation = 7,
         BasicLimitInformation = 2,
-        BasicUIRestrictions = 4,
+        // Commented out to remove sandbox restrictions as per user request for unrestricted LLM development
+        // BasicUIRestrictions = 4,
         EndOfJobTimeInformation = 6,
         ExtendedLimitInformation = 9,
         SecurityLimitInformation = 5,
